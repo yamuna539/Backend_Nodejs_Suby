@@ -11,6 +11,8 @@ const path = require('path')
 
 const app = express();
 
+const PORT = process.env.PORT || 5000;
+
 dotEnv.config();
 
 // app.get('/' , (req, res) => {
@@ -35,8 +37,9 @@ app.use('/uploads', express.static('uploads'))
 
 
 
-app.listen(5000, () => console.log("server is running......"))
-
-app.use('/home', (req, res)=>{
+app.listen(PORT, () =>{
+     console.log(`server is running...... at ${PORT}`);
+})
+app.use('/', (req, res)=>{
     res.send("<h1>Welcome to swiggy</h1>")
 })
