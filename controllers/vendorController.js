@@ -77,8 +77,8 @@ const getAllVendors = async(req, res) =>{
        console.error(err);
        res.status(500).json({message: "Internal Error"});
     }
-}
 
+}
 //get vendor details individually
 
 const getVendorById = async(req,res) =>{

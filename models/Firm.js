@@ -50,6 +50,6 @@ const firmSchema = new mongoose.Schema({
 
 //export this model
 
-const firm  = mongoose.model('firm' , firmSchema);
+const firm  = mongoose.model('Firm' , firmSchema);
 
 module.exports = firm
