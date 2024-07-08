@@ -5,6 +5,8 @@ const vendorRoutes = require('./routes/vendorRoutes');
 const bodyParser = require('body-parser');
 const firmRoutes = require('./routes/firmRoutes');
 const productRoutes = require('./routes/productRoutes');
+const cors = require('cors');
+
 //this is in-build module in nodejs
 const path = require('path')
 
@@ -14,6 +16,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 dotEnv.config();
+app.use(cors())
 
 // app.get('/' , (req, res) => {
 //     res.send("hello world")

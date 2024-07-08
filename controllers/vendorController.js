@@ -70,8 +70,8 @@ const vendorLogin = async(req, res) =>{
 const getAllVendors = async(req, res) =>{
     try{
         //a table numchi mana vendor table lo chupinchali anukunte populate() method use cheyali
-        const vendor = await Vendor.find().populate('firm');
-        res.json({vendor})
+        const vendors = await Vendor.find().populate('firm');
+        res.json({ vendors })
     }
     catch(err){
        console.error(err);
